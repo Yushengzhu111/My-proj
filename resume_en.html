@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Junjie Wu</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 0; }
+        body {
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            color: #333; background: #f0f0f0; line-height: 1.65;
+            -webkit-print-color-adjust: exact; print-color-adjust: exact;
+        }
+        .page {
+            width: 210mm; min-height: 297mm; margin: 20px auto; background: #fff;
+            padding: 28px 34px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; padding: 24px 30px; } }
+
+        /* Header */
+        .header { display: flex; align-items: center; padding-bottom: 16px; border-bottom: 2px solid #3b6cb5; }
+        .header-left { flex: 1; }
+        .name { font-size: 26px; font-weight: 700; color: #2c3e6b; display: inline; }
+        .target { font-size: 13px; color: #555; margin-left: 14px; }
+        .info-row { margin-top: 8px; font-size: 12.5px; color: #555; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+        .info-row span::before { content: "● "; color: #3b6cb5; font-size: 8px; vertical-align: middle; }
+
+        /* Section */
+        .section { margin-top: 16px; }
+        .section-title {
+            font-size: 15px; font-weight: 700; color: #3b6cb5;
+            border-bottom: 2px solid #3b6cb5; padding-bottom: 4px; margin-bottom: 10px;
+        }
+
+        /* Education */
+        .edu-item { margin-bottom: 10px; }
+        .edu-head { display: flex; justify-content: space-between; font-weight: 600; font-size: 13.5px; }
+        .edu-detail { font-size: 12.5px; color: #555; margin-top: 2px; }
+        .edu-detail span { margin-right: 18px; }
+
+        /* Experience / Project */
+        .exp-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+        .exp-title { font-weight: 700; font-size: 13.5px; color: #2c3e6b; }
+        .exp-role { font-size: 13px; color: #555; }
+        .exp-date { font-size: 12.5px; color: #777; white-space: nowrap; }
+        .exp-desc { font-size: 12.5px; color: #444; margin: 4px 0 2px 0; }
+        .tech-stack { font-size: 12.5px; color: #555; margin: 3px 0; }
+        .tech-stack strong { color: #2c3e6b; }
+
+        ul.achievements { margin: 4px 0 10px 18px; font-size: 12.5px; }
+        ul.achievements li { margin-bottom: 4px; color: #444; }
+        ul.achievements li strong { color: #2c3e6b; }
+
+        /* Research */
+        .paper-title { font-weight: 700; font-size: 13px; color: #2c3e6b; }
+        .paper-note { font-size: 12.5px; color: #555; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <h1 class="name">Junjie Wu</h1>
+            <span class="target">Target Position: AI Agent Developer</span>
+            <div class="info-row">
+                <span>Age: 25</span>
+                <span>Phone: 15952015337</span>
+                <span>Class of 2027</span>
+                <span>Location: Suzhou, China</span>
+                <span>Email: 20245227131@stu.suda.edu.cn</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">EDUCATION</div>
+
+        <div class="edu-item">
+            <div class="edu-head">
+                <span>Soochow University (Project 211 & Double First-Class) — Cyberspace & Information Security</span>
+                <span>2024.09 – Present</span>
+            </div>
+            <div class="edu-detail">
+                <span><strong>Postgraduate Entrance Exam:</strong> Ranked 2nd (1st in Interview)</span>
+                <span><strong>Honor:</strong> First-Class Scholarship</span>
+            </div>
+            <div class="edu-detail">
+                <span><strong>Key Courses:</strong> Computational Mathematics (96), Professional Writing (96), Engineering Ethics (94)</span>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-head">
+                <span>Nanjing Forestry University (Double First-Class) — Landscape Architecture (Discipline Rating: A-)</span>
+                <span>2019.09 – 2023.06</span>
+            </div>
+            <div class="edu-detail">
+                <span><strong>Honor:</strong> Outstanding League Member, Third-Class Scholarship</span>
+            </div>
+            <div class="edu-detail">
+                <span><strong>Key Courses:</strong> Fundamental Drafting (94), CAD Fundamentals (90), Professional Drafting (92), Signage Design (90)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Internship -->
+    <div class="section">
+        <div class="section-title">INTERNSHIP EXPERIENCE</div>
+        <div class="exp-head">
+            <div><span class="exp-title">Igrow Technology Co., Ltd.</span> <span class="exp-role">— Operations Engineer Intern</span></div>
+            <span class="exp-date">2025.06 – 2025.09</span>
+        </div>
+        <p class="exp-desc">
+            Responsible for text chunking and vector embedding of children's desk & chair product documents. Built an intelligent product knowledge base based on RAG architecture, enabling customer service and internal staff to retrieve product specifications, installation guides, and after-sales policies via natural language queries.
+        </p>
+    </div>
+
+    <!-- Project -->
+    <div class="section">
+        <div class="section-title">PROJECT EXPERIENCE</div>
+        <div class="exp-head">
+            <span class="exp-title">AiMenu — Intelligent Restaurant Ordering Assistant</span>
+            <span class="exp-date">2026.03 – 2026.04</span>
+        </div>
+        <p class="exp-desc">
+            An AI Agent-powered smart restaurant ordering system that uses an LLM-driven intent analysis engine to automatically route user natural language queries to corresponding tool chains, enabling intelligent dish recommendations, delivery range checks, and general consultation through end-to-end conversational AI.
+        </p>
+        <p class="tech-stack"><strong>Tech Stack:</strong> Python, LangChain, FastAPI, Pinecone, MySQL, MCP</p>
+        <ul class="achievements">
+            <li><strong>Agent Intent Analysis Engine:</strong> Built an intelligent agent with LangChain, guiding the LLM to output structured JSON via Prompt Engineering for automatic intent-to-tool mapping. Designed a dual-guarantee mechanism with retry correction and keyword-based fallback.</li>
+            <li><strong>RAG-Based Dish Recommendation:</strong> Vectorized menu data using DashScope embedding model and stored in Pinecone. Performed semantic Top-K retrieval, concatenated context, and generated personalized recommendations via LLM, significantly improving recommendation relevance.</li>
+            <li><strong>AMap Delivery Range Check:</strong> Encapsulated a complete geocoding and route planning pipeline supporting walking, cycling, and driving modes. Integrated HTTP retry mechanism to handle network instability.</li>
+            <li><strong>API Service Layer:</strong> Designed three core endpoints (/chat, /menu/list, /delivery) with FastAPI. Applied strict Pydantic model validation, implementing an API → Service → Tools/Agent layered architecture.</li>
+        </ul>
+    </div>
+
+    <!-- Research -->
+    <div class="section">
+        <div class="section-title">RESEARCH</div>
+        <div class="exp-head">
+            <span class="paper-title">FIBKD: A Fiber Bundle-Based Framework for Effective Knowledge Distillation</span>
+            <span class="exp-date">2025.09 – 2026.01</span>
+        </div>
+        <p class="paper-note" style="margin-top:2px;"><em>First Author — Accepted by ICASSP 2026</em></p>
+        <ul class="achievements">
+            <li>Proposed a knowledge distillation framework (FIBKD) based on fiber bundle geometry that decouples feature direction and magnitude, addressing the challenge of lightweight student models inheriting structured features from large models.</li>
+            <li>Surpassed multiple state-of-the-art methods across benchmarks.</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
